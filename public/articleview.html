@@ -1,0 +1,25 @@
+
+<div class="container">
+        <div class="entirePost">
+        <p class="category">{{article.tag}} <span class="date"><i class="fa fa-clock-o"></i>{{article.posted  |  date:'MMM, dd, yyyy'}}</p>
+        <h2>{{article.title}}</h2>
+        <p>{{article.body}}</p>
+        </div>
+
+        <div class="commentform">
+            <h2>Comments</h2>
+            <p class="commentcount">10 comments</p>
+            <form ng-submit="postComment(comment)">
+            <input type="text"  required ng-model="comment.author" placeholder="Name" >
+            <input type="email" required ng-model="comment.email" placeholder="Email" >
+            <textarea required ng-model="comment.commentbody" placeholder="Would you like to comment" style="min-height:80px; " ></textarea>
+            <button type="submit" class="btn btn-danger pull-left">Post Comments</button>
+            </form>
+        </div>
+        <ul class="comment">
+            <li ng-repeat="comment in comments">
+                <h3>{{comment.author}}<span class="pull-right">{{comment.dateAdded | date:"dd, MMM , yyyy"}}</span></h3>
+                <p>{{comment.commentbody}}</p>
+            </li>
+        </ul>
+</div>

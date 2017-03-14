@@ -1,0 +1,38 @@
+<div class="form">
+<div id="login">   
+          <h2 class="innerhead">Sign Up for Free</h2>
+          
+          <form ng-submit="createuser(user)">
+           <div class="field-wrap">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input type="text" ng-model="user.firstname" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input type="text"required ng-model="user.lastname" autocomplete="off"/>
+            </div>
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required ng-model="user.email" autocomplete="off"/>
+          </div>
+          <div class="field-wrap">
+            <label>
+              password<span class="req">*</span>
+            </label>
+            <input type="text" required ng-model="user.password" autocomplete="off"/>
+          </div>
+          
+          
+          
+          <button type="submit" class="btn btn-block btn-primary"/>Sign up Free!!!</button>
+          
+          </form>
+ </div>
+</div>

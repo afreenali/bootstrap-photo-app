@@ -1,0 +1,18 @@
+
+       
+        <div class="container">
+             <a href="#newArticle" class="btn btn-danger" style="margin-bottom:50px" >Create new Blog</a> 
+            <div ng-repeat="article in articles">
+                <a class="post" ng-href={{"#article/"+article._id}} >
+                  <div class="col-md-4">
+                    <div class="inner">
+                    <p class="category">{{article.tag}} <span class="date"><i class="fa fa-clock-o"></i>{{article.posted  |  date:'MMM, dd, yyyy'}}</p>
+                    <h2>{{article.title | limitTo:25}}</h2>
+                    <p>{{article.bodyshort}}</p>
+                    <a class="read-more" ng-click="deleteArticle(article._id)"><span class="glyphicon glyphicon-remove" ></span>Delete</a>  
+                    <a class="read-more" ng-href={{"#editArticle/"+article._id}}><span class="glyphicon glyphicon-remove" ></span>Edit</a>
+                    </div>
+                  </div>
+                  </a>
+           </div>
+        </div>

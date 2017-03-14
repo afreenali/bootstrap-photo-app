@@ -1,0 +1,32 @@
+<style>
+
+
+</style>
+<div data-wrapper></div>
+<div class="container">
+   <a href="#home" class="btn btn-danger" style="margin-bottom:50px" >View Blog</a> 
+<form ng-submit="formsubmit();">
+  
+  <input type=text id=subject required placeholder=Subject ng-model="article.title">
+  <textarea id=body required placeholder=Body style="min-height:200px; "  ng-model="article.body" ></textarea>
+   <div class="tag"><span>Tag: <label>
+    <input type="radio" ng-model="article.tag" value="buttons">
+    buttons
+  </label>
+  <label>
+    <input type="radio" ng-model="article.tag" value="menus">
+   menus
+  </label><br/>
+  </div>
+  <button type="submit" data-button=outline class="btn btn-danger btn-block">{{submittxt}}</button>
+
+  <div class="outer" ng-show="confirm" >
+  <div class="confirmation" >
+     <h2 class="dialog">Please Confirm</h2>
+     
+     <p>{{dialogtxt}}</p>
+     <button ng-click="userConfirmed();" class="btn btn-primary btn-block">Yes</a>
+  </div>
+  </div>
+</form>
+</div>
